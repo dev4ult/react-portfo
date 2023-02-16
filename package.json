@@ -13,11 +13,15 @@
   "dependencies": {
     "@chakra-ui/react": "^2.5.1",
     "@emotion/styled": "^11.10.5",
+    "@react-three/drei": "^9.56.24",
+    "@react-three/fiber": "^8.11.1",
+    "@types/three": "^0.149.0",
     "framer-motion": "^9.0.3",
     "react": "^18.2.0",
     "react-dom": "^18.2.0",
     "react-icons": "^4.7.1",
-    "react-router-dom": "^6.8.1"
+    "react-router-dom": "^6.8.1",
+    "three": "^0.149.0"
   },
   "devDependencies": {
     "@types/react": "^18.0.27",
