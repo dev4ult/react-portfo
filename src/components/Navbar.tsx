@@ -11,7 +11,7 @@ function Navbar() {
   const [path, setPath] = useState(location.pathname);
 
   function handleTab(e: SyntheticEvent<HTMLAnchorElement>): void {
-    console.log(e.target.href);
+    console.log(e.target);
   }
 
   return (
