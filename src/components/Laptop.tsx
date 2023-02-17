@@ -34,7 +34,7 @@ type GLTFResult = GLTF & {
 export function Model(props: JSX.IntrinsicElements['group']) {
   const { nodes, materials } = useGLTF('./src/assets/laptop.gltf') as GLTFResult;
   return (
-    <group {...props} dispose={null} scale={0.25} rotation={[0, 2.9, 0]}>
+    <group {...props} dispose={null} scale={0.25} rotation={[0.3, 2.9, 0]}>
       <group position={[0, -3, 2]} rotation={[Math.PI / 8, 0, 0]}>
         <mesh geometry={nodes.mesh_0.geometry} material={materials['laptop_top.png']} />
         <mesh geometry={nodes.mesh_0_1.geometry} material={materials['laptop_top.png']} />
