@@ -1,5 +1,32 @@
-function Journey() {
-  return <div>Journey</div>;
+import { FC } from 'react';
+import { Flex } from '@chakra-ui/react';
+import { FiArrowLeft, FiArrowRight } from 'react-icons/fi';
+import { useNavigate } from 'react-router-dom';
+
+import NavButton from '../components/NavButton';
+
+interface Props {
+  handleTab: (newPath: string) => void;
 }
+
+const Journey: FC<Props> = ({ handleTab }) => {
+  const navigate = useNavigate();
+
+  return (
+    <div>
+      <Flex gap="3">
+        <NavButton
+          leftIcon={<FiArrowLeft />}
+          onClick={() => {
+            navigate('/react-portfo/project');
+            handleTab('/react-portfo/project');
+          }}
+        >
+          Project
+        </NavButton>
+      </Flex>
+    </div>
+  );
+};
 
 export default Journey;

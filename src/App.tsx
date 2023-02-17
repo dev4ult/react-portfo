@@ -9,7 +9,7 @@ import Journey from './pages/Journey';
 import Project from './pages/Project';
 
 const root = '/react-portfo';
-const [about, projects, journey] = [root + '/about', root + '/projects', root + '/journey'];
+const [about, project, journey] = [root + '/about', root + '/project', root + '/journey'];
 
 function App() {
   const [page, setPage] = useState<string>('');
@@ -25,9 +25,9 @@ function App() {
           <Navbar page={page} handleTab={handleTab} />
           <Routes>
             <Route path={root} element={<Home handleTab={handleTab} />} />
-            <Route path={about} element={<About />} />
-            <Route path={projects} element={<Project />} />
-            <Route path={journey} element={<Journey />} />
+            <Route path={about} element={<About handleTab={handleTab} />} />
+            <Route path={project} element={<Project handleTab={handleTab} />} />
+            <Route path={journey} element={<Journey handleTab={handleTab} />} />
           </Routes>
           <Footer />
         </Container>

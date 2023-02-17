@@ -4,7 +4,7 @@ import { css } from '@emotion/react';
 import { Link as RTDLink, useLocation } from 'react-router-dom';
 
 const root = '/react-portfo';
-const [about, projects, journey] = [root + '/about', root + '/projects', root + '/journey'];
+const [about, project, journey] = [root + '/about', root + '/project', root + '/journey'];
 
 interface Props {
   page: string;
@@ -31,8 +31,8 @@ const Navbar: FC<Props> = ({ page, handleTab }) => {
         <Link css={handleStyle(about)} as={RTDLink} to={about} onClick={handleTab.bind(null, about)}>
           About
         </Link>
-        <Link css={handleStyle(projects)} as={RTDLink} to={projects} onClick={handleTab.bind(null, projects)}>
-          Projects
+        <Link css={handleStyle(project)} as={RTDLink} to={project} onClick={handleTab.bind(null, project)}>
+          Project
         </Link>
         <Link css={handleStyle(journey)} as={RTDLink} to={journey} onClick={handleTab.bind(null, journey)}>
           Journey

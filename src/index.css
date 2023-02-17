@@ -8,3 +8,13 @@
 *::after {
   font-family: 'Archivo', sans-serif;
 }
+
+/* width */
+::-webkit-scrollbar {
+  width: 1px;
+}
+
+/* Handle */
+::-webkit-scrollbar-thumb {
+  background: black;
+}
