@@ -6,11 +6,13 @@ interface Props {
   href: string;
   ariaLabel: string;
   icon: ReactElement;
+  [key: string]: any;
 }
 
-const IconLink: FC<Props> = ({ href, ariaLabel, icon }) => {
+const IconLink: FC<Props> = (props) => {
+  const { href, ariaLabel, icon } = props;
   return (
-    <Link href={href} isExternal>
+    <Link {...props} href={href} isExternal>
       <IconButton css={btnStyle} aria-label={ariaLabel} icon={icon} />
     </Link>
   );

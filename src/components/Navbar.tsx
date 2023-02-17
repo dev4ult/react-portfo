@@ -1,25 +1,29 @@
-import { useState, SyntheticEvent } from 'react';
+import { FC, useEffect } from 'react';
 import { Flex, Link } from '@chakra-ui/react';
-import { Link as RTDLink, useLocation } from 'react-router-dom';
 import { css } from '@emotion/react';
+import { Link as RTDLink, useLocation } from 'react-router-dom';
 
 const root = '/react-portfo';
 const [about, projects, journey] = [root + '/about', root + '/projects', root + '/journey'];
 
-function Navbar() {
-  const location = useLocation();
-  const [path, setPath] = useState(location.pathname);
+interface Props {
+  page: string;
+  handleTab: (newPath: string) => void;
+}
 
-  function handleTab(newPath: string): void {
-    setPath(newPath);
-  }
+const Navbar: FC<Props> = ({ page, handleTab }) => {
+  const location = useLocation();
+
+  useEffect(() => {
+    handleTab(location.pathname);
+  }, []);
 
   const handleStyle = (linkPath: string) => {
-    return linkPath == path ? [NavLink, tabOn] : NavLink;
+    return linkPath == page ? [NavLink, TabOn] : NavLink;
   };
 
   return (
-    <Flex justifyContent="space-between" py="8" color="whiteAlpha.600" fontSize="lg" fontWeight="medium">
+    <Flex justifyContent="space-between" py="8" gap="14" color="whiteAlpha.600" fontSize="lg" fontWeight="medium">
       <Link css={handleStyle(root)} as={RTDLink} to={root} onClick={handleTab.bind(null, root)}>
         Nibras
       </Link>
@@ -36,12 +40,15 @@ function Navbar() {
       </Flex>
     </Flex>
   );
-}
+};
 
-const tabOn = css`
+const TabOn = css`
   color: white;
   text-decoration: underline;
   text-underline-offset: 20px;
+  &:hover {
+    text-decoration: underline;
+  }
 `;
 
 const NavLink = css`
