@@ -8,7 +8,7 @@ import { OrbitControls } from '@react-three/drei';
 
 function Home() {
   return (
-    <Flex direction={['column-reverse', 'row']} gap="5" alignItems="center" justifyContent="space-between" color="white" py="10">
+    <Flex direction={['column-reverse', 'row']} gap="5" alignItems="center" justifyContent="space-between" color="whiteAlpha.900" py="10">
       <div>
         <Text fontSize="3xl" fontWeight="semibold">
           Nibras Alyassar
@@ -23,7 +23,7 @@ function Home() {
           <IconLink href="https://www.linkedin.com/in/nibras-alyassar-90526918b/" ariaLabel="linkedin" icon={<SiLinkedin />} />
         </HStack>
       </div>
-      <motion.div initial={{ y: 50, opacity: 0 }} animate={{ y: 0, opacity: 1 }} transition={{ duration: 1 }}>
+      <motion.div initial={{ y: 50, opacity: 0 }} animate={{ y: 0, opacity: 1 }} transition={{ duration: 0.5 }} whileHover={{ scale: 1.2, transition: { duration: 0.5 } }} whileTap={{ scale: 0.8 }}>
         <Box height="80">
           <Canvas>
             <OrbitControls autoRotate={true} autoRotateSpeed={10} enableZoom={false} />

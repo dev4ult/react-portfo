@@ -10,29 +10,39 @@ function Navbar() {
   const location = useLocation();
   const [path, setPath] = useState(location.pathname);
 
-  function handleTab(e: SyntheticEvent<HTMLAnchorElement>): void {
-    console.log(e.target);
+  function handleTab(newPath: string): void {
+    setPath(newPath);
   }
+
+  const handleStyle = (linkPath: string) => {
+    return linkPath == path ? [NavLink, tabOn] : NavLink;
+  };
 
   return (
     <Flex justifyContent="space-between" py="8" color="whiteAlpha.600" fontSize="lg" fontWeight="medium">
-      <Link css={NavLink} as={RTDLink} to={root} onClick={handleTab}>
+      <Link css={handleStyle(root)} as={RTDLink} to={root} onClick={handleTab.bind(null, root)}>
         Nibras
       </Link>
       <Flex gap="14">
-        <Link css={NavLink} as={RTDLink} to={about} onClick={handleTab}>
+        <Link css={handleStyle(about)} as={RTDLink} to={about} onClick={handleTab.bind(null, about)}>
           About
         </Link>
-        <Link css={NavLink} as={RTDLink} to={projects} onClick={handleTab}>
+        <Link css={handleStyle(projects)} as={RTDLink} to={projects} onClick={handleTab.bind(null, projects)}>
           Projects
         </Link>
-        <Link css={NavLink} as={RTDLink} to={journey} onClick={handleTab}>
+        <Link css={handleStyle(journey)} as={RTDLink} to={journey} onClick={handleTab.bind(null, journey)}>
           Journey
         </Link>
       </Flex>
     </Flex>
   );
 }
+
+const tabOn = css`
+  color: white;
+  text-decoration: underline;
+  text-underline-offset: 20px;
+`;
 
 const NavLink = css`
   &:hover {

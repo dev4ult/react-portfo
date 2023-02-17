@@ -12,7 +12,7 @@ const [about, projects, journey] = [root + '/about', root + '/projects', root + 
 function App() {
   return (
     <Router>
-      <Box bg="#191919" minH="100vh">
+      <Box bg="blackAlpha.900" minH="100vh">
         <Container maxW="6xl">
           <Navbar />
           <Routes>

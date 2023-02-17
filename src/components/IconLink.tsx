@@ -17,9 +17,9 @@ const IconLink: FC<Props> = ({ href, ariaLabel, icon }) => {
 };
 
 const btnStyle = css`
-  background-color: #292929;
+  background-color: #202020;
   &:hover {
-    background-color: #333333;
+    background-color: #2e2e2e;
   }
 `;
 
