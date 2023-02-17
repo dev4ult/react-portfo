@@ -18,13 +18,15 @@ const Project: FC<Props> = ({ handleTab }) => {
   const navigate = useNavigate();
 
   return (
-    <Box py="16">
-      <Text fontSize="4xl" color="whiteAlpha.900" fontWeight="bold">
-        List Project
-      </Text>
-      <Text fontSize="xl" color="whiteAlpha.900">
-        Lorem ipsum dolor sit, amet consectetur adipisicing elit. Cum, assumenda.
-      </Text>
+    <Box py="10">
+      <motion.div variants={items} initial="hidden" animate="show">
+        <Text fontSize="4xl" color="whiteAlpha.900" fontWeight="bold">
+          Project List
+        </Text>
+        <Text fontSize="xl" color="whiteAlpha.900" fontFamily="Inter">
+          Lorem ipsum dolor sit, amet consectetur adipisicing elit. Cum, assumenda.
+        </Text>
+      </motion.div>
       <Flex as={motion.div} variants={container} initial="hidden" animate="show" wrap="wrap" gap="2" mt="8">
         <Card
           as={motion.div}

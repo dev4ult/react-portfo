@@ -7,7 +7,7 @@ function Footer() {
     <Box width="60" ml="auto" mt="auto" position="absolute" right="5" bottom="5">
       <Marquee gradient={false} direction="right">
         <Text color="whiteAlpha.900" fontFamily="Inter" display="flex" gap="2">
-          | Recently active on{' '}
+          | | Recently active on{' '}
           <Link color="whiteAlpha.600" href="https://github.com/dev4ult" isExternal fontFamily="Inter" _hover={{ color: 'white', textDecoration: 'none' }} display="flex" alignItems="center" gap="1">
             <SiGithub /> Github
           </Link>
