@@ -20,7 +20,7 @@ const NavButton: FC<Props> = (props) => {
 const ButtonCss = css`
   color: RGBA(255, 255, 255, 0.92);
   border-radius: 100px;
-  margin-top: 1.5rem;
+  margin-top: 2rem;
   cursor: pointer;
   background-color: RGBA(255, 255, 255, 0.16);
   &:hover {

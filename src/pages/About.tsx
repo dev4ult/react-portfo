@@ -16,20 +16,20 @@ const About: FC<Props> = ({ handleTab }) => {
   const navigate = useNavigate();
 
   return (
-    <Box color="whiteAlpha.900" py="10">
-      <Flex alignItems="center" justifyContent="space-between">
+    <Box color="whiteAlpha.900" pt={[5, 10]} pb="20">
+      <Flex direction={['column-reverse', 'row']} alignItems="center" justifyContent="space-between" gap="5">
         <motion.div variants={container} initial="hidden" animate="show">
-          <Text as={motion.p} variants={items} fontSize="4xl" fontWeight="bold">
+          <Text as={motion.p} variants={items} fontSize={['2xl', '3xl', '4xl']} fontWeight="bold">
             About Me
           </Text>
-          <Text as={motion.p} variants={items} fontSize="xl" maxW="2xl" fontFamily="Inter">
+          <Text as={motion.p} variants={items} fontSize={['md', 'lg', 'xl']} maxW="2xl" fontFamily="Inter" color="whiteAlpha.800" textDecor="underline" textDecorationColor="whiteAlpha.400">
             Hello, My name is Nibras Alyassar. I am currently an Informatic Student at Polytechnic Jakarta in Indonesia. So many things I want to explore in Informatic Technology
           </Text>
-          <Text as={motion.p} variants={items} fontSize="4xl" fontWeight="semibold" mt="5">
+          <Text as={motion.p} variants={items} fontSize={['2xl', '3xl', '4xl']} fontWeight="semibold" mt="5">
             Focus
           </Text>
-          <Text as={motion.p} variants={items} fontSize="xl" fontFamily="Inter">
-            Web Developing | Machine Learning
+          <Text as={motion.p} variants={items} color="whiteAlpha.800" fontSize={['md', 'lg', 'xl']} fontFamily="Inter">
+            Web Development | Machine Learning
           </Text>
           <Flex gap="3">
             <NavButton
@@ -52,7 +52,7 @@ const About: FC<Props> = ({ handleTab }) => {
             </NavButton>
           </Flex>
         </motion.div>
-        <Image src="./src/assets/donut.gif" alt="flying donut" />
+        <Image as={motion.img} variants={items} initial="hidden" height={['44', '60', '80']} animate="show" src="./src/assets/donut.gif" alt="flying donut" />
       </Flex>
     </Box>
   );

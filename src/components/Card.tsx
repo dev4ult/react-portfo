@@ -13,9 +13,9 @@ interface Props {
 const Card: FC<Props> = (props) => {
   const { imgSrc, title, githubSrc, technologies } = props;
   return (
-    <Box {...props} bgColor="whiteAlpha.100" rounded="md" w="fit-content" color="whiteAlpha.500" overflow="hidden" borderWidth="1px" borderColor="whiteAlpha.100" backdropBlur="3xl">
+    <Box {...props} bgColor="whiteAlpha.100" rounded="md" color="whiteAlpha.500" overflow="hidden" borderWidth="1px" borderColor="whiteAlpha.100" backdropBlur="3xl">
       <Box borderWidth="1px" borderColor="whiteAlpha.300" mt="4">
-        <Image w="60" h="40" src={imgSrc} alt="project img" objectFit="cover" />
+        <Image w="full" h="48" src={imgSrc} alt="project img" objectFit="cover" />
       </Box>
       <Box p="4">
         <Text fontWeight="semibold" fontSize="xl">

@@ -1,5 +1,5 @@
 import { FC } from 'react';
-import { Box, Flex, Text, VStack } from '@chakra-ui/react';
+import { Box, Flex, Text, VStack, Grid, GridItem } from '@chakra-ui/react';
 import { SiReact, SiPhp, SiMariadb, SiHtml5, SiCss3, SiJava, SiJavascript, SiTailwindcss, SiExpress, SiMongodb, SiSocketdotio, SiGithub } from 'react-icons/si';
 import { FaNodeJs } from 'react-icons/fa';
 import { FiArrowRight, FiArrowLeft } from 'react-icons/fi';
@@ -20,174 +20,176 @@ const Project: FC<Props> = ({ handleTab }) => {
   const navigate = useNavigate();
 
   return (
-    <Box py="10">
+    <Box pt={[5, 10]} pb="20">
       <motion.div variants={items} initial="hidden" animate="show">
-        <Text fontSize="4xl" color="whiteAlpha.900" fontWeight="bold">
+        <Text fontSize={['2xl', '3xl', '4xl']} color="whiteAlpha.900" fontWeight="bold">
           Project List
         </Text>
-        <Text fontSize="xl" color="whiteAlpha.900" fontFamily="Inter">
+        <Text fontSize={['md', 'lg', 'xl']} color="whiteAlpha.800" fontFamily="Inter">
           Lorem ipsum dolor sit, amet consectetur adipisicing elit. Cum, assumenda.
         </Text>
       </motion.div>
-      <Flex as={motion.div} variants={container} initial="hidden" animate="show" wrap="wrap" gap="2" mt="8">
-        <Card
-          as={motion.div}
-          variants={items}
-          title="Weather App"
-          imgSrc="./src/images/weather-app.jpg"
-          githubSrc="https://github.com/dev4ult/react-weather-app"
-          technologies={
-            <>
-              <SiReact />
-              <SiTailwindcss />
-              <SiJavascript />
-            </>
-          }
-        />
-        <Card
-          as={motion.div}
-          variants={items}
-          title="Simple Chat App"
-          imgSrc="./src/images/simple-chat-app.jpg"
-          githubSrc="https://github.com/dev4ult/chat-app-with-socket-io"
-          technologies={
-            <>
-              <FaNodeJs />
-              <SiExpress />
-              <SiSocketdotio />
-              <SiHtml5 />
-              <SiJavascript />
-            </>
-          }
-        />
-        <Card
-          as={motion.div}
-          variants={items}
-          title="Match Us"
-          imgSrc="./src/images/memory-card-game.jpg"
-          githubSrc="https://github.com/dev4ult/memory-card-game"
-          technologies={
-            <>
-              <SiHtml5 />
-              <SiJava />
-              <SiTailwindcss />
-              <SiJavascript />
-            </>
-          }
-        />
-        <Card
-          as={motion.div}
-          variants={items}
-          title="LSP"
-          imgSrc="./src/images/lsp.jpg"
-          githubSrc="https://github.com/dev4ult/project-LSP"
-          technologies={
-            <>
-              <SiPhp />
-              <SiMariadb />
-              <SiTailwindcss />
-              <SiJavascript />
-            </>
-          }
-        />
-        <Card
-          as={motion.div}
-          variants={items}
-          title="Bookshelf App"
-          imgSrc="./src/images/bookshelf-app.jpg"
-          githubSrc="https://github.com/dev4ult/Bookshelf-App"
-          technologies={
-            <>
-              <SiHtml5 />
-              <SiCss3 />
-              <SiJavascript />
-            </>
-          }
-        />
-        <Card
-          as={motion.div}
-          variants={items}
-          title="Simple Todo App"
-          imgSrc="./src/images/todo-app.jpg"
-          githubSrc="https://github.com/dev4ult/simple-react-todo"
-          technologies={
-            <>
-              <SiReact />
-              <SiTailwindcss />
-              <SiJavascript />
-            </>
-          }
-        />
-        <Card
-          as={motion.div}
-          variants={items}
-          title="Movie List"
-          imgSrc="./src/images/movie-list.jpg"
-          githubSrc="https://github.com/dev4ult/fetching-omdb-movie-api"
-          technologies={
-            <>
-              <SiHtml5 />
-              <SiTailwindcss />
-              <SiJavascript />
-            </>
-          }
-        />
-        <Card
-          as={motion.div}
-          variants={items}
-          title="Markdown Note App"
-          imgSrc="./src/images/markdown-note-app.jpg"
-          githubSrc="https://github.com/dev4ult/react-markdown-note-app"
-          technologies={
-            <>
-              <SiReact />
-              <SiCss3 />
-              <SiJavascript />
-            </>
-          }
-        />
-        <Card
-          as={motion.div}
-          variants={items}
-          title="Simple Contact App"
-          imgSrc="./src/images/express-contact-app.jpg"
-          githubSrc="https://github.com/dev4ult/express-contact-app"
-          technologies={
-            <>
-              <FaNodeJs />
-              <SiExpress />
-              <SiMongodb />
-              <SiTailwindcss />
-              <SiJavascript />
-            </>
-          }
-        />
-        <Card
-          as={motion.div}
-          variants={items}
-          title="Flyhigh Skate Shop"
-          imgSrc="./src/images/flyhigh-skate-shop.jpg"
-          githubSrc="https://github.com/dev4ult/flyhigh-website"
-          technologies={
-            <>
-              <SiPhp />
-              <SiMariadb />
-              <SiTailwindcss />
-              <SiJavascript />
-            </>
-          }
-        />
-        <Flex as={motion.a} target="_blank" href="https://github.com/dev4ult?tab=repositories" css={GithubCard} variants={items} bg="whiteAlpha.50" borderWidth="1px" borderColor="whiteAlpha.200" w="60" rounded="md" p="4">
-          <VStack spacing="5" className="card-content" textAlign="center" color="whiteAlpha.500">
-            <Box fontSize="5xl">
-              <SiGithub />
-            </Box>
-            <Text fontSize="xl" fontWeight="semibold">
-              More Open Source Project
-            </Text>
-          </VStack>
-        </Flex>
-      </Flex>
+      <Grid as={motion.div} templateColumns={['repeat(1, 1fr)', 'repeat(2, 1fr)', 'repeat(3, 1fr)', 'repeat(4, 1fr)']} variants={container} initial="hidden" animate="show" gap="2" mt="8">
+        <GridItem as={motion.div} variants={items}>
+          <Card
+            title="Weather App"
+            imgSrc="./src/images/weather-app.jpg"
+            githubSrc="https://github.com/dev4ult/react-weather-app"
+            technologies={
+              <>
+                <SiReact />
+                <SiTailwindcss />
+                <SiJavascript />
+              </>
+            }
+          />
+        </GridItem>
+        <GridItem as={motion.div} variants={items}>
+          <Card
+            title="Simple Chat App"
+            imgSrc="./src/images/simple-chat-app.jpg"
+            githubSrc="https://github.com/dev4ult/chat-app-with-socket-io"
+            technologies={
+              <>
+                <FaNodeJs />
+                <SiExpress />
+                <SiSocketdotio />
+                <SiHtml5 />
+                <SiJavascript />
+              </>
+            }
+          />
+        </GridItem>
+        <GridItem as={motion.div} variants={items}>
+          <Card
+            title="Match Us"
+            imgSrc="./src/images/memory-card-game.jpg"
+            githubSrc="https://github.com/dev4ult/memory-card-game"
+            technologies={
+              <>
+                <SiHtml5 />
+                <SiJava />
+                <SiTailwindcss />
+                <SiJavascript />
+              </>
+            }
+          />
+        </GridItem>
+        <GridItem as={motion.div} variants={items}>
+          <Card
+            title="LSP"
+            imgSrc="./src/images/lsp.jpg"
+            githubSrc="https://github.com/dev4ult/project-LSP"
+            technologies={
+              <>
+                <SiPhp />
+                <SiMariadb />
+                <SiTailwindcss />
+                <SiJavascript />
+              </>
+            }
+          />
+        </GridItem>
+        <GridItem as={motion.div} variants={items}>
+          <Card
+            title="Bookshelf App"
+            imgSrc="./src/images/bookshelf-app.jpg"
+            githubSrc="https://github.com/dev4ult/Bookshelf-App"
+            technologies={
+              <>
+                <SiHtml5 />
+                <SiCss3 />
+                <SiJavascript />
+              </>
+            }
+          />
+        </GridItem>
+        <GridItem as={motion.div} variants={items}>
+          <Card
+            title="Simple Todo App"
+            imgSrc="./src/images/todo-app.jpg"
+            githubSrc="https://github.com/dev4ult/simple-react-todo"
+            technologies={
+              <>
+                <SiReact />
+                <SiTailwindcss />
+                <SiJavascript />
+              </>
+            }
+          />
+        </GridItem>
+        <GridItem as={motion.div} variants={items}>
+          <Card
+            title="Movie List"
+            imgSrc="./src/images/movie-list.jpg"
+            githubSrc="https://github.com/dev4ult/fetching-omdb-movie-api"
+            technologies={
+              <>
+                <SiHtml5 />
+                <SiTailwindcss />
+                <SiJavascript />
+              </>
+            }
+          />
+        </GridItem>
+        <GridItem as={motion.div} variants={items}>
+          <Card
+            title="Markdown Note App"
+            imgSrc="./src/images/markdown-note-app.jpg"
+            githubSrc="https://github.com/dev4ult/react-markdown-note-app"
+            technologies={
+              <>
+                <SiReact />
+                <SiCss3 />
+                <SiJavascript />
+              </>
+            }
+          />
+        </GridItem>
+        <GridItem as={motion.div} variants={items}>
+          <Card
+            title="Simple Contact App"
+            imgSrc="./src/images/express-contact-app.jpg"
+            githubSrc="https://github.com/dev4ult/express-contact-app"
+            technologies={
+              <>
+                <FaNodeJs />
+                <SiExpress />
+                <SiMongodb />
+                <SiTailwindcss />
+                <SiJavascript />
+              </>
+            }
+          />
+        </GridItem>
+        <GridItem as={motion.div} variants={items}>
+          <Card
+            title="Flyhigh Skate Shop"
+            imgSrc="./src/images/flyhigh-skate-shop.jpg"
+            githubSrc="https://github.com/dev4ult/flyhigh-website"
+            technologies={
+              <>
+                <SiPhp />
+                <SiMariadb />
+                <SiTailwindcss />
+                <SiJavascript />
+              </>
+            }
+          />
+        </GridItem>
+        <GridItem as={motion.div} variants={items}>
+          <Box as={motion.a} target="_blank" href="https://github.com/dev4ult?tab=repositories" css={GithubCard} variants={items} h="full" rounded="md" p="4">
+            <VStack spacing="5" className="card-content" textAlign="center" color="whiteAlpha.500">
+              <Box fontSize="5xl">
+                <SiGithub />
+              </Box>
+              <Text fontSize="xl" fontWeight="semibold">
+                More Open Source Project
+              </Text>
+            </VStack>
+          </Box>
+        </GridItem>
+      </Grid>
       <Flex gap="3">
         <NavButton
           leftIcon={<FiArrowLeft />}
@@ -213,6 +215,10 @@ const Project: FC<Props> = ({ handleTab }) => {
 };
 
 const GithubCard = css`
+  background-color: RGBA(255, 255, 255, 0.04);
+  border: 1px solid RGBA(255, 255, 255, 0.08);
+  display: flex;
+  padding-block: 50px;
   justify-content: center;
   align-items: center;
   transition: all 0.3s ease;
@@ -222,7 +228,7 @@ const GithubCard = css`
   }
 
   &:hover .card-content {
-    color: white;
+    color: RGBA(255, 255, 255, 0.8);
     transition: all 0.3s ease;
   }
 `;

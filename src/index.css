@@ -11,10 +11,5 @@
 
 /* width */
 ::-webkit-scrollbar {
-  width: 1px;
-}
-
-/* Handle */
-::-webkit-scrollbar-thumb {
-  background: black;
+  width: 0;
 }

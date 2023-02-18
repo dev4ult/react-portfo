@@ -21,13 +21,13 @@ const Home: FC<Props> = ({ handleTab }) => {
   const navigate = useNavigate();
 
   return (
-    <Flex direction={['column-reverse', 'row']} gap="5" alignItems="center" justifyContent="space-between" color="whiteAlpha.900" py="10">
+    <Flex direction={['column-reverse', 'row']} gap="5" alignItems="center" justifyContent="space-between" color="whiteAlpha.900" pt={[5, 10]} pb="20">
       <div>
         <motion.div variants={items} initial="hidden" animate="show">
-          <Text fontSize="3xl" fontWeight="semibold">
+          <Text fontSize={['xl', '2xl', '3xl']} fontWeight="semibold">
             Nibras Alyassar
           </Text>
-          <Text fontSize="5xl" fontWeight="bold">
+          <Text fontSize={['3xl', '4xl', '5xl']} fontWeight="bold">
             Full Stack Web Developer
           </Text>
         </motion.div>
@@ -47,8 +47,8 @@ const Home: FC<Props> = ({ handleTab }) => {
           About
         </NavButton>
       </div>
-      <motion.div initial={{ y: 50, opacity: 0 }} animate={{ y: 0, opacity: 1 }} transition={{ duration: 0.5 }} whileHover={{ cursor: 'grab' }} whileTap={{ scale: 0.8, cursor: 'grabbing' }}>
-        <Box height="80">
+      <motion.div variants={items} initial="hidden" animate="show" whileHover={{ cursor: 'grab' }} whileTap={{ scale: 0.8, cursor: 'grabbing' }}>
+        <Box height={['44', '60', '80']}>
           <Canvas>
             <OrbitControls autoRotate={true} autoRotateSpeed={10} enableZoom={false} />
             <ambientLight intensity={0.2} />

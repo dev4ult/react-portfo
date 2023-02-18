@@ -1,6 +1,8 @@
 import { FC, useEffect } from 'react';
-import { Flex, Link } from '@chakra-ui/react';
+import { Flex, Link, Box, Menu, MenuButton, MenuList, MenuItem } from '@chakra-ui/react';
 import { css } from '@emotion/react';
+import { HamburgerIcon } from '@chakra-ui/icons';
+
 import { Link as RTDLink, useLocation } from 'react-router-dom';
 
 const root = '/react-portfo';
@@ -23,11 +25,29 @@ const Navbar: FC<Props> = ({ page, handleTab }) => {
   };
 
   return (
-    <Flex justifyContent="space-between" py="8" gap="14" color="whiteAlpha.600" fontSize="lg" fontWeight="medium">
+    <Flex justifyContent="space-between" alignItems="center" py="8" gap="14" color="whiteAlpha.600" fontSize="lg" fontWeight="medium">
       <Link css={handleStyle(root)} as={RTDLink} to={root} onClick={handleTab.bind(null, root)}>
         Nibras
       </Link>
-      <Flex gap="14">
+      <Box display={['block', 'none']}>
+        <Menu>
+          <MenuButton>
+            <HamburgerIcon fontSize="2xl" />
+          </MenuButton>
+          <MenuList color="blackAlpha.800">
+            <MenuItem as={RTDLink} to={about}>
+              About
+            </MenuItem>
+            <MenuItem as={RTDLink} to={project}>
+              Project
+            </MenuItem>
+            <MenuItem as={RTDLink} to={journey}>
+              Journey
+            </MenuItem>
+          </MenuList>
+        </Menu>
+      </Box>
+      <Flex gap="14" display={['none', 'flex']}>
         <Link css={handleStyle(about)} as={RTDLink} to={about} onClick={handleTab.bind(null, about)}>
           About
         </Link>
