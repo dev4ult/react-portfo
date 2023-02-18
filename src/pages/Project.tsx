@@ -33,8 +33,8 @@ const Project: FC<Props> = ({ handleTab }) => {
         <GridItem as={motion.div} variants={items}>
           <Card
             title="Weather App"
-            imgSrc="./src/images/weather-app.jpg"
-            githubSrc="https://github.com/dev4ult/react-weather-app"
+            img_source="./src/images/weather-app.jpg"
+            github_source="https://github.com/dev4ult/react-weather-app"
             technologies={
               <>
                 <SiReact />
@@ -47,8 +47,8 @@ const Project: FC<Props> = ({ handleTab }) => {
         <GridItem as={motion.div} variants={items}>
           <Card
             title="Simple Chat App"
-            imgSrc="./src/images/simple-chat-app.jpg"
-            githubSrc="https://github.com/dev4ult/chat-app-with-socket-io"
+            img_source="./src/images/simple-chat-app.jpg"
+            github_source="https://github.com/dev4ult/chat-app-with-socket-io"
             technologies={
               <>
                 <FaNodeJs />
@@ -63,8 +63,8 @@ const Project: FC<Props> = ({ handleTab }) => {
         <GridItem as={motion.div} variants={items}>
           <Card
             title="Match Us"
-            imgSrc="./src/images/memory-card-game.jpg"
-            githubSrc="https://github.com/dev4ult/memory-card-game"
+            img_source="./src/images/memory-card-game.jpg"
+            github_source="https://github.com/dev4ult/memory-card-game"
             technologies={
               <>
                 <SiHtml5 />
@@ -78,8 +78,8 @@ const Project: FC<Props> = ({ handleTab }) => {
         <GridItem as={motion.div} variants={items}>
           <Card
             title="LSP"
-            imgSrc="./src/images/lsp.jpg"
-            githubSrc="https://github.com/dev4ult/project-LSP"
+            img_source="./src/images/lsp.jpg"
+            github_source="https://github.com/dev4ult/project-LSP"
             technologies={
               <>
                 <SiPhp />
@@ -93,8 +93,8 @@ const Project: FC<Props> = ({ handleTab }) => {
         <GridItem as={motion.div} variants={items}>
           <Card
             title="Bookshelf App"
-            imgSrc="./src/images/bookshelf-app.jpg"
-            githubSrc="https://github.com/dev4ult/Bookshelf-App"
+            img_source="./src/images/bookshelf-app.jpg"
+            github_source="https://github.com/dev4ult/Bookshelf-App"
             technologies={
               <>
                 <SiHtml5 />
@@ -107,8 +107,8 @@ const Project: FC<Props> = ({ handleTab }) => {
         <GridItem as={motion.div} variants={items}>
           <Card
             title="Simple Todo App"
-            imgSrc="./src/images/todo-app.jpg"
-            githubSrc="https://github.com/dev4ult/simple-react-todo"
+            img_source="./src/images/todo-app.jpg"
+            github_source="https://github.com/dev4ult/simple-react-todo"
             technologies={
               <>
                 <SiReact />
@@ -121,8 +121,8 @@ const Project: FC<Props> = ({ handleTab }) => {
         <GridItem as={motion.div} variants={items}>
           <Card
             title="Movie List"
-            imgSrc="./src/images/movie-list.jpg"
-            githubSrc="https://github.com/dev4ult/fetching-omdb-movie-api"
+            img_source="./src/images/movie-list.jpg"
+            github_source="https://github.com/dev4ult/fetching-omdb-movie-api"
             technologies={
               <>
                 <SiHtml5 />
@@ -135,8 +135,8 @@ const Project: FC<Props> = ({ handleTab }) => {
         <GridItem as={motion.div} variants={items}>
           <Card
             title="Markdown Note App"
-            imgSrc="./src/images/markdown-note-app.jpg"
-            githubSrc="https://github.com/dev4ult/react-markdown-note-app"
+            img_source="./src/images/markdown-note-app.jpg"
+            github_source="https://github.com/dev4ult/react-markdown-note-app"
             technologies={
               <>
                 <SiReact />
@@ -149,8 +149,8 @@ const Project: FC<Props> = ({ handleTab }) => {
         <GridItem as={motion.div} variants={items}>
           <Card
             title="Simple Contact App"
-            imgSrc="./src/images/express-contact-app.jpg"
-            githubSrc="https://github.com/dev4ult/express-contact-app"
+            img_source="./src/images/express-contact-app.jpg"
+            github_source="https://github.com/dev4ult/express-contact-app"
             technologies={
               <>
                 <FaNodeJs />
@@ -165,8 +165,8 @@ const Project: FC<Props> = ({ handleTab }) => {
         <GridItem as={motion.div} variants={items}>
           <Card
             title="Flyhigh Skate Shop"
-            imgSrc="./src/images/flyhigh-skate-shop.jpg"
-            githubSrc="https://github.com/dev4ult/flyhigh-website"
+            img_source="./src/images/flyhigh-skate-shop.jpg"
+            github_source="https://github.com/dev4ult/flyhigh-website"
             technologies={
               <>
                 <SiPhp />
