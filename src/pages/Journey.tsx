@@ -92,7 +92,7 @@ const Journey: FC<Props> = ({ handleTab }) => {
                 <Text color="white">ReactJS is my dream Web FE Framework</Text>
               </ListItem>
               <ListItem mt="10">
-                Oct 2022 <ListIcon fontSize="xl" as={CgShapeRhombus} />
+                Nov 2022 <ListIcon fontSize="xl" as={CgShapeRhombus} />
                 <Text color="white">A simple Markdown Note with ReactJS</Text>
               </ListItem>
               <ListItem mt="10">
@@ -120,7 +120,7 @@ const Journey: FC<Props> = ({ handleTab }) => {
           Project
         </NavButton>
       </Box>
-      <Image src={JavascriptLogo} objectFit="cover" w={[40, 52, 80]} alt="javascript logo" />
+      <Image as={motion.img} src={JavascriptLogo} variants={items} initial="hidden" animate="show" objectFit="cover" w={[40, 52, 80]} alt="javascript logo" />
     </Flex>
   );
 };
