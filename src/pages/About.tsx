@@ -37,8 +37,8 @@ const About: FC<Props> = ({ handleTab }) => {
             <NavButton
               leftIcon={<FiArrowLeft />}
               onClick={() => {
-                navigate('/react-portfo/');
-                handleTab('/react-portfo/');
+                navigate('/react-portfo');
+                handleTab('/react-portfo');
               }}
             >
               Hero
