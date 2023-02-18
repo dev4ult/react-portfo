@@ -1,9 +1,11 @@
 import { FC } from 'react';
-import { Box, Flex, Text, HStack } from '@chakra-ui/react';
-import { SiReact, SiPhp, SiMariadb, SiHtml5, SiCss3, SiJava, SiJavascript, SiTailwindcss, SiExpress, SiSocketdotio } from 'react-icons/si';
+import { Box, Flex, Text, VStack } from '@chakra-ui/react';
+import { SiReact, SiPhp, SiMariadb, SiHtml5, SiCss3, SiJava, SiJavascript, SiTailwindcss, SiExpress, SiMongodb, SiSocketdotio, SiGithub } from 'react-icons/si';
+import { FaNodeJs } from 'react-icons/fa';
 import { FiArrowRight, FiArrowLeft } from 'react-icons/fi';
 import { motion } from 'framer-motion';
 import { useNavigate } from 'react-router-dom';
+import { css } from '@emotion/react';
 
 import Card from '../components/Card';
 import NavButton from '../components/NavButton';
@@ -31,14 +33,14 @@ const Project: FC<Props> = ({ handleTab }) => {
         <Card
           as={motion.div}
           variants={items}
-          title="React Weather App"
+          title="Weather App"
           imgSrc="./src/images/weather-app.jpg"
           githubSrc="https://github.com/dev4ult/react-weather-app"
           technologies={
             <>
               <SiReact />
-              <SiJavascript />
               <SiTailwindcss />
+              <SiJavascript />
             </>
           }
         />
@@ -50,10 +52,11 @@ const Project: FC<Props> = ({ handleTab }) => {
           githubSrc="https://github.com/dev4ult/chat-app-with-socket-io"
           technologies={
             <>
+              <FaNodeJs />
               <SiExpress />
               <SiSocketdotio />
-              <SiJavascript />
               <SiHtml5 />
+              <SiJavascript />
             </>
           }
         />
@@ -65,10 +68,10 @@ const Project: FC<Props> = ({ handleTab }) => {
           githubSrc="https://github.com/dev4ult/memory-card-game"
           technologies={
             <>
-              <SiJavascript />
-              <SiJava />
               <SiHtml5 />
+              <SiJava />
               <SiTailwindcss />
+              <SiJavascript />
             </>
           }
         />
@@ -104,12 +107,40 @@ const Project: FC<Props> = ({ handleTab }) => {
         <Card
           as={motion.div}
           variants={items}
-          title="Bookshelf App"
-          imgSrc="./src/images/bookshelf-app.jpg"
-          githubSrc="https://github.com/dev4ult/Bookshelf-App"
+          title="Simple Todo App"
+          imgSrc="./src/images/todo-app.jpg"
+          githubSrc="https://github.com/dev4ult/simple-react-todo"
+          technologies={
+            <>
+              <SiReact />
+              <SiTailwindcss />
+              <SiJavascript />
+            </>
+          }
+        />
+        <Card
+          as={motion.div}
+          variants={items}
+          title="Movie List"
+          imgSrc="./src/images/movie-list.jpg"
+          githubSrc="https://github.com/dev4ult/fetching-omdb-movie-api"
           technologies={
             <>
               <SiHtml5 />
+              <SiTailwindcss />
+              <SiJavascript />
+            </>
+          }
+        />
+        <Card
+          as={motion.div}
+          variants={items}
+          title="Markdown Note App"
+          imgSrc="./src/images/markdown-note-app.jpg"
+          githubSrc="https://github.com/dev4ult/react-markdown-note-app"
+          technologies={
+            <>
+              <SiReact />
               <SiCss3 />
               <SiJavascript />
             </>
@@ -118,13 +149,15 @@ const Project: FC<Props> = ({ handleTab }) => {
         <Card
           as={motion.div}
           variants={items}
-          title="Bookshelf App"
-          imgSrc="./src/images/bookshelf-app.jpg"
-          githubSrc="https://github.com/dev4ult/Bookshelf-App"
+          title="Simple Contact App"
+          imgSrc="./src/images/express-contact-app.jpg"
+          githubSrc="https://github.com/dev4ult/express-contact-app"
           technologies={
             <>
-              <SiHtml5 />
-              <SiCss3 />
+              <FaNodeJs />
+              <SiExpress />
+              <SiMongodb />
+              <SiTailwindcss />
               <SiJavascript />
             </>
           }
@@ -132,17 +165,28 @@ const Project: FC<Props> = ({ handleTab }) => {
         <Card
           as={motion.div}
           variants={items}
-          title="Bookshelf App"
-          imgSrc="./src/images/bookshelf-app.jpg"
-          githubSrc="https://github.com/dev4ult/Bookshelf-App"
+          title="Flyhigh Skate Shop"
+          imgSrc="./src/images/flyhigh-skate-shop.jpg"
+          githubSrc="https://github.com/dev4ult/flyhigh-website"
           technologies={
             <>
-              <SiHtml5 />
-              <SiCss3 />
+              <SiPhp />
+              <SiMariadb />
+              <SiTailwindcss />
               <SiJavascript />
             </>
           }
         />
+        <Flex as={motion.a} target="_blank" href="https://github.com/dev4ult?tab=repositories" css={GithubCard} variants={items} bg="whiteAlpha.50" borderWidth="1px" borderColor="whiteAlpha.200" w="60" rounded="md" p="4">
+          <VStack spacing="5" className="card-content" textAlign="center" color="whiteAlpha.500">
+            <Box fontSize="5xl">
+              <SiGithub />
+            </Box>
+            <Text fontSize="xl" fontWeight="semibold">
+              More Open Source Project
+            </Text>
+          </VStack>
+        </Flex>
       </Flex>
       <Flex gap="3">
         <NavButton
@@ -167,5 +211,20 @@ const Project: FC<Props> = ({ handleTab }) => {
     </Box>
   );
 };
+
+const GithubCard = css`
+  justify-content: center;
+  align-items: center;
+  transition: all 0.3s ease;
+
+  .card-content {
+    transition: all 0.3s ease;
+  }
+
+  &:hover .card-content {
+    color: white;
+    transition: all 0.3s ease;
+  }
+`;
 
 export default Project;
