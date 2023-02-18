@@ -26,7 +26,7 @@ const Project: FC<Props> = ({ handleTab }) => {
           Project List
         </Text>
         <Text fontSize={['md', 'lg', 'xl']} color="whiteAlpha.800" fontFamily="Inter">
-          Lorem ipsum dolor sit, amet consectetur adipisicing elit. Cum, assumenda.
+          All of my cool website project i build since 2022
         </Text>
       </motion.div>
       <Grid as={motion.div} templateColumns={['repeat(1, 1fr)', 'repeat(2, 1fr)', 'repeat(3, 1fr)', 'repeat(4, 1fr)']} variants={container} initial="hidden" animate="show" gap="2" mt="8">

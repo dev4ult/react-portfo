@@ -41,11 +41,11 @@ const Journey: FC<Props> = ({ handleTab }) => {
   }, []);
 
   return (
-    <Flex direction={['column-reverse', 'row']} justifyContent="space-between" gap="5" alignItems="center" pt={[5, 10]} pb="20">
+    <Flex direction={['column-reverse', 'row']} justifyContent="space-between" gap="10" alignItems="center" pt={[5, 10]} pb="20">
       <Box>
         <Box as={motion.div} variants={container} initial="hidden" animate="show">
           <Text as={motion.p} variants={items} fontSize={['2xl', '3xl', '4xl']} fontWeight="semibold" color="white">
-            Web Development Journey
+            Web Development
           </Text>
           <Flex as={motion.div} variants={items} gap="3" mt="5" color="whiteAlpha.800" h="47vh">
             <ScrollProgress progress={scrollTop} />

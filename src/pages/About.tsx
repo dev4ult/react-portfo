@@ -20,10 +20,10 @@ const About: FC<Props> = ({ handleTab }) => {
       <Flex direction={['column-reverse', 'row']} alignItems="center" justifyContent="space-between" gap="5">
         <motion.div variants={container} initial="hidden" animate="show">
           <Text as={motion.p} variants={items} fontSize={['2xl', '3xl', '4xl']} fontWeight="bold">
-            About Me
+            Me
           </Text>
-          <Text as={motion.p} variants={items} fontSize={['md', 'lg', 'xl']} maxW="2xl" fontFamily="Inter" color="whiteAlpha.800" textDecor="underline" textDecorationColor="whiteAlpha.400">
-            Hello, My name is Nibras Alyassar. I am currently an Informatic Student at Polytechnic Jakarta in Indonesia. So many things I want to explore in Informatic Technology
+          <Text as={motion.p} variants={items} fontSize={['md', 'lg', 'xl']} maxW="2xl" fontFamily="Inter" color="whiteAlpha.800">
+            Hi, My name is Nibras Alyassar. I am currently an Informatic Student at Polytechnic Jakarta in Indonesia.
           </Text>
           <Text as={motion.p} variants={items} fontSize={['2xl', '3xl', '4xl']} fontWeight="semibold" mt="5">
             Focus
