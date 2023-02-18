@@ -12,6 +12,8 @@ import React, { useRef } from 'react';
 import { useGLTF } from '@react-three/drei';
 import { GLTF } from 'three-stdlib';
 
+import LaptopModel from '../assets/laptop.glb';
+
 type GLTFResult = GLTF & {
   nodes: {
     Object_4: THREE.Mesh;
@@ -36,7 +38,7 @@ type GLTFResult = GLTF & {
 };
 
 export function Model(props: JSX.IntrinsicElements['group']) {
-  const { nodes, materials } = useGLTF('./src/assets/laptop.glb') as GLTFResult;
+  const { nodes, materials } = useGLTF(LaptopModel) as GLTFResult;
   return (
     <group {...props} dispose={null} scale={0.25} rotation={[0.3, 2.9, 0]}>
       {/* <group position={[15.95, 0, 18.79]} rotation={[-Math.PI / 2, 0, 3.14]}> */}
@@ -63,4 +65,4 @@ export function Model(props: JSX.IntrinsicElements['group']) {
   );
 }
 
-useGLTF.preload('./src/assets/laptop.glb');
+useGLTF.preload(LaptopModel);

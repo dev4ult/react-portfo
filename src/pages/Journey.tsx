@@ -10,6 +10,8 @@ import ScrollProgress from '../components/ScrollProgress';
 
 import { container, items } from '../animations/staggerPopUp';
 
+import JavascriptLogo from '../images/javascript.png';
+
 interface Props {
   handleTab: (newPath: string) => void;
 }
@@ -118,7 +120,7 @@ const Journey: FC<Props> = ({ handleTab }) => {
           Project
         </NavButton>
       </Box>
-      <Image src="./src/images/javascript.png" objectFit="cover" w={[40, 52, 80]} alt="javascript logo" />
+      <Image src={JavascriptLogo} objectFit="cover" w={[40, 52, 80]} alt="javascript logo" />
     </Flex>
   );
 };

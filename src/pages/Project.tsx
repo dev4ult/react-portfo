@@ -12,6 +12,17 @@ import NavButton from '../components/NavButton';
 
 import { container, items } from '../animations/staggerPopUp';
 
+import PImageWeatherApp from '../images/weather-app.jpg';
+import PImageSimpleChatApp from '../images/simple-chat-app.jpg';
+import PImageMemoryCardGame from '../images/memory-card-game.jpg';
+import PImageLSP from '../images/lsp.jpg';
+import PImageBookshelfApp from '../images/bookshelf-app.jpg';
+import PImageSimpleTodoApp from '../images/todo-app.jpg';
+import PImageMovieList from '../images/movie-list.jpg';
+import PImageMarkdownNoteApp from '../images/markdown-note-app.jpg';
+import PImageExpressContactApp from '../images/express-contact-app.jpg';
+import PImageFlyhighSkateShop from '../images/flyhigh-skate-shop.jpg';
+
 interface Props {
   handleTab: (newPath: string) => void;
 }
@@ -33,7 +44,7 @@ const Project: FC<Props> = ({ handleTab }) => {
         <GridItem as={motion.div} variants={items}>
           <Card
             title="Weather App"
-            img_source="./src/images/weather-app.jpg"
+            img_source={PImageWeatherApp}
             github_source="https://github.com/dev4ult/react-weather-app"
             technologies={
               <>
@@ -47,7 +58,7 @@ const Project: FC<Props> = ({ handleTab }) => {
         <GridItem as={motion.div} variants={items}>
           <Card
             title="Simple Chat App"
-            img_source="./src/images/simple-chat-app.jpg"
+            img_source={PImageSimpleChatApp}
             github_source="https://github.com/dev4ult/chat-app-with-socket-io"
             technologies={
               <>
@@ -63,7 +74,7 @@ const Project: FC<Props> = ({ handleTab }) => {
         <GridItem as={motion.div} variants={items}>
           <Card
             title="Match Us"
-            img_source="./src/images/memory-card-game.jpg"
+            img_source={PImageMemoryCardGame}
             github_source="https://github.com/dev4ult/memory-card-game"
             technologies={
               <>
@@ -78,7 +89,7 @@ const Project: FC<Props> = ({ handleTab }) => {
         <GridItem as={motion.div} variants={items}>
           <Card
             title="LSP"
-            img_source="./src/images/lsp.jpg"
+            img_source={PImageLSP}
             github_source="https://github.com/dev4ult/project-LSP"
             technologies={
               <>
@@ -93,7 +104,7 @@ const Project: FC<Props> = ({ handleTab }) => {
         <GridItem as={motion.div} variants={items}>
           <Card
             title="Bookshelf App"
-            img_source="./src/images/bookshelf-app.jpg"
+            img_source={PImageBookshelfApp}
             github_source="https://github.com/dev4ult/Bookshelf-App"
             technologies={
               <>
@@ -107,7 +118,7 @@ const Project: FC<Props> = ({ handleTab }) => {
         <GridItem as={motion.div} variants={items}>
           <Card
             title="Simple Todo App"
-            img_source="./src/images/todo-app.jpg"
+            img_source={PImageSimpleTodoApp}
             github_source="https://github.com/dev4ult/simple-react-todo"
             technologies={
               <>
@@ -121,7 +132,7 @@ const Project: FC<Props> = ({ handleTab }) => {
         <GridItem as={motion.div} variants={items}>
           <Card
             title="Movie List"
-            img_source="./src/images/movie-list.jpg"
+            img_source={PImageMovieList}
             github_source="https://github.com/dev4ult/fetching-omdb-movie-api"
             technologies={
               <>
@@ -135,7 +146,7 @@ const Project: FC<Props> = ({ handleTab }) => {
         <GridItem as={motion.div} variants={items}>
           <Card
             title="Markdown Note App"
-            img_source="./src/images/markdown-note-app.jpg"
+            img_source={PImageMarkdownNoteApp}
             github_source="https://github.com/dev4ult/react-markdown-note-app"
             technologies={
               <>
@@ -149,7 +160,7 @@ const Project: FC<Props> = ({ handleTab }) => {
         <GridItem as={motion.div} variants={items}>
           <Card
             title="Simple Contact App"
-            img_source="./src/images/express-contact-app.jpg"
+            img_source={PImageExpressContactApp}
             github_source="https://github.com/dev4ult/express-contact-app"
             technologies={
               <>
@@ -165,7 +176,7 @@ const Project: FC<Props> = ({ handleTab }) => {
         <GridItem as={motion.div} variants={items}>
           <Card
             title="Flyhigh Skate Shop"
-            img_source="./src/images/flyhigh-skate-shop.jpg"
+            img_source={PImageFlyhighSkateShop}
             github_source="https://github.com/dev4ult/flyhigh-website"
             technologies={
               <>

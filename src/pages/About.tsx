@@ -8,6 +8,8 @@ import NavButton from '../components/NavButton';
 
 import { container, items } from '../animations/staggerPopUp';
 
+import DonutGif from '../assets/donut.gif';
+
 interface Props {
   handleTab: (newPath: string) => void;
 }
@@ -52,7 +54,7 @@ const About: FC<Props> = ({ handleTab }) => {
             </NavButton>
           </Flex>
         </motion.div>
-        <Image as={motion.img} variants={items} initial="hidden" height={['44', '60', '80']} animate="show" src="./src/assets/donut.gif" alt="flying donut" />
+        <Image as={motion.img} variants={items} initial="hidden" height={['44', '60', '80']} animate="show" src={DonutGif} alt="flying donut" />
       </Flex>
     </Box>
   );
