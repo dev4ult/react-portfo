@@ -21,7 +21,7 @@ function App() {
   return (
     <Router>
       <Box bg="blackAlpha.900" minH="100vh">
-        <Container maxW="6xl" minH="100vh" px="5">
+        <Container maxW="6xl" minH="100vh" px="5" pos="relative">
           <Navbar page={page} handleTab={handleTab} />
           <Routes>
             <Route path={root} element={<Home handleTab={handleTab} />} />
