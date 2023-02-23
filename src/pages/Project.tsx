@@ -55,6 +55,7 @@ const Project: FC<Props> = ({ handleTab }) => {
             }
           />
         </GridItem>
+
         <GridItem as={motion.div} variants={items}>
           <Card
             title="Simple Chat App"

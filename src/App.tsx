@@ -20,7 +20,7 @@ function App() {
 
   return (
     <Router>
-      <Box bg="blackAlpha.900" minH="100vh">
+      <Box bg="background" minH="100vh">
         <Container maxW="6xl" minH="100vh" px="5" pos="relative">
           <Navbar page={page} handleTab={handleTab} />
           <Routes>

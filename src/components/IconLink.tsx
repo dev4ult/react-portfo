@@ -13,16 +13,9 @@ const IconLink: FC<Props> = (props) => {
   const { href, ariaLabel, icon } = props;
   return (
     <Link {...props} href={href} isExternal>
-      <IconButton css={btnStyle} aria-label={ariaLabel} icon={icon} />
+      <IconButton bgColor="buttonBg" color="buttonColor" _hover={{ bgColor: 'buttonBg' }} aria-label={ariaLabel} icon={icon} />
     </Link>
   );
 };
-
-const btnStyle = css`
-  background-color: #202020;
-  &:hover {
-    background-color: #2e2e2e;
-  }
-`;
 
 export default IconLink;

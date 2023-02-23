@@ -63,7 +63,7 @@ const Navbar: FC<Props> = ({ page, handleTab }) => {
 };
 
 const TabOn = css`
-  color: #35ebda;
+  color: primary;
   text-decoration: underline;
   text-underline-offset: 20px;
   &:hover {
