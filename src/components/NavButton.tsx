@@ -18,14 +18,11 @@ const NavButton: FC<Props> = (props) => {
 };
 
 const ButtonCss = css`
-  color: RGBA(255, 255, 255, 0.92);
+  color: black;
   border-radius: 100px;
   margin-top: 2rem;
   cursor: pointer;
-  background-color: RGBA(255, 255, 255, 0.16);
-  &:hover {
-    background-color: RGBA(255, 255, 255, 0.06);
-  }
+  background-color: white;
 `;
 
 export default NavButton;

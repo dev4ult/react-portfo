@@ -31,12 +31,12 @@ const Project: FC<Props> = ({ handleTab }) => {
   const navigate = useNavigate();
 
   return (
-    <Box pt={[5, 10]} pb="20">
+    <Box pt={[5, 10]} pb="20" color="white">
       <motion.div variants={items} initial="hidden" animate="show">
-        <Text fontSize={['2xl', '3xl', '4xl']} color="whiteAlpha.900" fontWeight="bold">
+        <Text fontSize={['2xl', '3xl', '4xl']} fontWeight="bold" color="primary" textDecor="underline" textUnderlineOffset="15px" mb="5">
           Project List
         </Text>
-        <Text fontSize={['md', 'lg', 'xl']} color="whiteAlpha.800" fontFamily="Inter">
+        <Text fontSize={['md', 'lg', 'xl']} fontFamily="Inter">
           All of my cool website project i build since 2022
         </Text>
       </motion.div>

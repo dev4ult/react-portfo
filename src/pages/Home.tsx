@@ -21,17 +21,17 @@ const Home: FC<Props> = ({ handleTab }) => {
   const navigate = useNavigate();
 
   return (
-    <Flex direction={['column-reverse', 'row']} gap="5" alignItems="center" justifyContent="space-between" color="whiteAlpha.900" pt={[5, 10]} pb="20">
+    <Flex direction={['column-reverse', 'row']} gap="5" alignItems="center" justifyContent="space-between" color="white" pt={[5, 10]} pb="20">
       <div>
         <motion.div variants={items} initial="hidden" animate="show">
           <Text fontSize={['xl', '2xl', '3xl']} fontWeight="semibold">
             Nibras Alyassar
           </Text>
-          <Text fontSize={['3xl', '4xl', '5xl']} fontWeight="bold">
+          <Text fontSize={['3xl', '4xl', '5xl']} fontWeight="bold" color="primary" textDecor="underline" textUnderlineOffset="25px" lineHeight="2">
             Full Stack Web Developer
           </Text>
         </motion.div>
-        <HStack as={motion.div} variants={container} initial="hidden" animate="show" spacing="3" mt="2">
+        <HStack as={motion.div} variants={container} initial="hidden" animate="show" spacing="3" mt="7">
           <IconLink as={motion.a} variants={items} href="https://github.com/dev4ult" ariaLabel="github" icon={<SiGithub />} />
           <IconLink as={motion.a} variants={items} href="https://twitter.com/nibras_alyassar" ariaLabel="twitter" icon={<SiTwitter />} />
           <IconLink as={motion.a} variants={items} href="https://www.instagram.com/naga_indosayur/" ariaLabel="instagram" icon={<SiInstagram />} />
@@ -52,7 +52,6 @@ const Home: FC<Props> = ({ handleTab }) => {
           <Canvas>
             <OrbitControls autoRotate={true} autoRotateSpeed={10} enableZoom={false} />
             <ambientLight intensity={0.2} />
-            <pointLight position={[10, 10, 10]} />
             <directionalLight intensity={1} />
             <Model />
           </Canvas>

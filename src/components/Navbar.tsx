@@ -25,7 +25,7 @@ const Navbar: FC<Props> = ({ page, handleTab }) => {
   };
 
   return (
-    <Flex justifyContent="space-between" alignItems="center" py="8" gap="14" color="whiteAlpha.600" fontSize="lg" fontWeight="medium">
+    <Flex justifyContent="space-between" alignItems="center" py="8" gap="14" color="white" fontSize="lg" fontWeight="medium">
       <Link css={handleStyle(root)} as={RTDLink} to={root} onClick={handleTab.bind(null, root)}>
         Nibras
       </Link>
@@ -34,14 +34,14 @@ const Navbar: FC<Props> = ({ page, handleTab }) => {
           <MenuButton>
             <HamburgerIcon fontSize="2xl" />
           </MenuButton>
-          <MenuList color="blackAlpha.800">
-            <MenuItem as={RTDLink} to={about}>
+          <MenuList color="black" bg="primary" border="none">
+            <MenuItem bg="primary" as={RTDLink} to={about}>
               About
             </MenuItem>
-            <MenuItem as={RTDLink} to={project}>
+            <MenuItem bg="primary" as={RTDLink} to={project}>
               Project
             </MenuItem>
-            <MenuItem as={RTDLink} to={journey}>
+            <MenuItem bg="primary" as={RTDLink} to={journey}>
               Journey
             </MenuItem>
           </MenuList>
@@ -63,7 +63,7 @@ const Navbar: FC<Props> = ({ page, handleTab }) => {
 };
 
 const TabOn = css`
-  color: white;
+  color: #35ebda;
   text-decoration: underline;
   text-underline-offset: 20px;
   &:hover {
@@ -73,7 +73,7 @@ const TabOn = css`
 
 const NavLink = css`
   &:hover {
-    color: white;
+    color: #35ebda;
     text-decoration: none;
   }
 `;
