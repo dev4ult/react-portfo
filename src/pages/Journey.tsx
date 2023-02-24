@@ -46,7 +46,7 @@ const Journey: FC<Props> = ({ handleTab }) => {
     <Flex direction={['column-reverse', 'row']} justifyContent="space-between" gap="10" alignItems="center" pt={[5, 10]} pb="20">
       <div>
         <Box as={motion.div} variants={container} initial="hidden" animate="show">
-          <Text as={motion.p} variants={items} fontSize={['2xl', '3xl', '4xl']} fontWeight="semibold" color="primary" textDecor="underline" textUnderlineOffset="15px" mb="5">
+          <Text as={motion.p} variants={items} fontSize={['2xl', '3xl', '4xl']} color="primary" textDecor="underline" textUnderlineOffset="15px" mb="5">
             Web Development
           </Text>
           <Flex as={motion.div} variants={items} gap="3" color="primary" h="47vh">
