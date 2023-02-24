@@ -18,7 +18,7 @@ const About: FC<Props> = ({ handleTab }) => {
   const navigate = useNavigate();
 
   return (
-    <Box color="white" pt={[5, 10]} pb="20">
+    <Box color="secondary" pt={[5, 10]} pb="20">
       <Flex direction={['column-reverse', 'row']} alignItems="center" justifyContent="space-between" gap="5">
         <motion.div variants={container} initial="hidden" animate="show">
           <Text as={motion.p} variants={items} fontSize={['2xl', '3xl', '4xl']} fontWeight="bold" color="primary" textDecor="underline" textUnderlineOffset="15px" mb="5">

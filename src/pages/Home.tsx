@@ -46,7 +46,9 @@ const Home: FC<Props> = ({ handleTab }) => {
           About
         </NavButton>
       </div>
-      <Box w={[44, 60, 80]}></Box>
+      <Box w={[44, 60, 80]}>
+        <Image src={AnimatedBlob} alt="blob" />
+      </Box>
     </Flex>
   );
 };

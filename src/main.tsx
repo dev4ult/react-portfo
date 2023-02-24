@@ -3,7 +3,7 @@ import ReactDOM from 'react-dom/client';
 import App from './App';
 import './index.css';
 import { ChakraProvider } from '@chakra-ui/react';
-import { darkTheme, lightTheme } from './styles/theme';
+import { darkTheme } from './styles/theme';
 
 ReactDOM.createRoot(document.getElementById('root') as HTMLElement).render(
   <React.StrictMode>
