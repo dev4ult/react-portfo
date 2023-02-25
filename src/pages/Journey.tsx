@@ -1,5 +1,5 @@
 import { FC, useState, useEffect } from 'react';
-import { Box, Flex, Text, List, ListItem, ListIcon, UnorderedList, Image } from '@chakra-ui/react';
+import { Box, Flex, Text, List, ListItem, ListIcon, UnorderedList, Image, Divider } from '@chakra-ui/react';
 import { FiArrowLeft } from 'react-icons/fi';
 import { CgShapeRhombus } from 'react-icons/cg';
 import { motion } from 'framer-motion';
@@ -46,9 +46,10 @@ const Journey: FC<Props> = ({ handleTab }) => {
     <Flex direction={['column-reverse', 'row']} justifyContent="space-between" gap="10" alignItems="center" pt={[5, 10]} pb="20">
       <div>
         <Box as={motion.div} variants={container} initial="hidden" animate="show">
-          <Text as={motion.p} variants={items} fontSize={['2xl', '3xl', '4xl']} color="primary" textDecor="underline" textUnderlineOffset="15px" mb="5">
+          <Text as={motion.p} variants={items} fontSize={['2xl', '3xl', '4xl']} color="primary" fontWeight="medium">
             Web Development
           </Text>
+          <Divider mt="3" mb="7" />
           <Flex as={motion.div} variants={items} gap="3" color="primary" h="47vh">
             <ScrollProgress progress={scrollTop} />
             <List className="journey" overflowY="auto" fontSize="lg">

@@ -33,7 +33,7 @@ const Project: FC<Props> = ({ handleTab }) => {
   return (
     <Box pt={[5, 10]} pb="20" color="white">
       <motion.div variants={items} initial="hidden" animate="show">
-        <Text fontSize={['2xl', '3xl', '4xl']} color="primary" textDecor="underline" textUnderlineOffset="15px" mb="5">
+        <Text fontSize={['2xl', '3xl', '4xl']} color="primary" fontWeight="medium">
           Project List
         </Text>
         <Text fontSize={['md', 'lg', 'xl']} fontFamily="Inter">

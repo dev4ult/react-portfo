@@ -26,11 +26,11 @@ const Home: FC<Props> = ({ handleTab }) => {
           <Text fontSize={['xl', '2xl', '3xl']} fontWeight="semibold">
             Nibras Alyassar
           </Text>
-          <Text fontSize={['3xl', '4xl', '5xl']} fontWeight="bold" color="primary" textDecor="underline" textUnderlineOffset="25px" lineHeight="2">
+          <Text fontSize={['3xl', '4xl', '5xl']} fontFamily="Archivo" fontWeight="bold" color="primary">
             Full Stack Web Developer
           </Text>
         </motion.div>
-        <HStack as={motion.div} variants={container} initial="hidden" animate="show" spacing="3" mt="7">
+        <HStack as={motion.div} variants={container} initial="hidden" animate="show" spacing="3" mt="3">
           <IconLink as={motion.a} variants={items} href="https://github.com/dev4ult" ariaLabel="github" icon={<SiGithub />} />
           <IconLink as={motion.a} variants={items} href="https://twitter.com/nibras_alyassar" ariaLabel="twitter" icon={<SiTwitter />} />
           <IconLink as={motion.a} variants={items} href="https://www.instagram.com/naga_indosayur/" ariaLabel="instagram" icon={<SiInstagram />} />

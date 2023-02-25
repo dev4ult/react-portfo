@@ -21,13 +21,13 @@ const About: FC<Props> = ({ handleTab }) => {
     <Box color="secondary" pt={[5, 10]} pb="20">
       <Flex direction={['column-reverse', 'row']} alignItems="center" justifyContent="space-between" gap="5">
         <motion.div variants={container} initial="hidden" animate="show">
-          <Text as={motion.p} variants={items} fontSize={['2xl', '3xl', '4xl']} color="primary" textDecor="underline" textUnderlineOffset="15px" mb="5">
+          <Text as={motion.p} variants={items} fontSize={['2xl', '3xl', '4xl']} color="primary" fontWeight="medium">
             Me
           </Text>
           <Text as={motion.p} variants={items} fontSize={['md', 'lg', 'xl']} maxW="2xl" fontFamily="Inter">
             Hi, My name is Nibras Alyassar. I am currently an Informatic Student at Polytechnic Jakarta in Indonesia.
           </Text>
-          <Text as={motion.p} variants={items} fontSize={['2xl', '3xl', '4xl']} mt="5" color="primary" textDecor="underline" textUnderlineOffset="15px" mb="5">
+          <Text as={motion.p} variants={items} fontSize={['2xl', '3xl', '4xl']} mt="5" color="primary" fontWeight="medium">
             Focus
           </Text>
           <Text as={motion.p} variants={items} fontSize={['md', 'lg', 'xl']} fontFamily="Inter">
